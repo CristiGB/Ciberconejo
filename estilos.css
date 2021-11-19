@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --azul_rey: #080a2b;
+    --blanco: #ffffff;
+    --pink_light: #f0bfed;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}
+
+
+Body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--azul_rey);
+}
+
+.Main{
+    width: 300px;
+    color: var(--blanco);
+}
+
+.titulo{
+    text-align: center;
+}
+.cifraForm{
+    margin-top: 10px;
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    margin: 10px 0 ; 
+    padding: 10px; 
+    height: 100px;
+    resize: none;
+}
+.container_rango{
+    display: flex;
+    justify-content: center;
+}
+input[type="range"]{
+    width: 100%;
+}

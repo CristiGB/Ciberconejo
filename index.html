@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script href="cifrador.js"></script>
+    <title>Crifrador</title>
+</head>
+<body>
+    <div class="Main">
+        <h1 class="titulo">Crifradores</h1>
+        <form class="cifraForm" autocomplete="off">
+            <label for="text_crifrador">Escoja el cifrador:</label>
+            <select name="select_cifrador" id="cifradores" form="cifraform">
+                <option value="vacio">Seleccione..  </option>
+                <option value="A_Fin">Sustitucion a fin</option>
+                <option value="Des_Puro">Desplazamiento Puro</option>
+            </select>
+            <textarea id="text_original" spellcheck="false" placeholder="Ingrese su texto a cifrar" 
+            class="texto_original"></textarea>
+            </form>
+
+        <div class="container_rango">
+            <input classs="rango" type="range" value="4" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
+            <output>10</output>
+        </div>
+        <div class="crifrado"></div>
+    </div>
+</body>
+</html>
