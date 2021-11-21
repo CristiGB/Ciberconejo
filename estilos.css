@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
 
 :root{
     --azul_rey: #080a2b;
+    --azulito: #497fac;
     --blanco: #ffffff;
     --pink_light: #f0bfed;
+    --gris: #4d4c55;
     
 }
 
@@ -20,12 +24,16 @@ Body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--azul_rey);
+    background-color: var(--azulito);
 }
 
 .Main{
     width: 300px;
+    padding: 20px;
     color: var(--blanco);
+    border-radius: 25px;
+    box-shadow: 6px 9px 8px 3px rgb(0, 0, 0, 50%);
+    border: rgba(0, 0, 0, 0.05) dashed;
 }
 
 .titulo{
@@ -36,6 +44,7 @@ Body{
     width: 100%;
 }
 textarea{
+    font-family: 'Merriweather', serif;
     width: 100%;
     margin: 10px 0 ; 
     padding: 10px; 
@@ -48,4 +57,32 @@ textarea{
 }
 input[type="range"]{
     width: 100%;
+}
+
+.container_button{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+.botton{
+    width: 50%;
+    border-radius: 10px;
+    background-color: var(--blanco);
+    color: var(--azul_rey);
+    text-align: center;
+    cursor: pointer;
+}
+.botton:hover{
+    color: var(--blanco);
+    background-color: var(--azul_rey);
+}
+.cifrado{
+    padding: 10px 0;
+}
+
+.texto_cifrado{
+    width: 100%;
+    background-color: var(--gris);
+    margin: 10px 0 ; 
+    color: var(--blanco);
 }

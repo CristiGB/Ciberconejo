@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <script href="cifrador.js"></script>
+    
     <title>Crifrador</title>
 </head>
 <body>
@@ -18,15 +18,28 @@
                 <option value="A_Fin">Sustitucion a fin</option>
                 <option value="Des_Puro">Desplazamiento Puro</option>
             </select>
-            <textarea id="text_original" spellcheck="false" placeholder="Ingrese su texto a cifrar" 
+            <textarea id="texto_original" spellcheck="false" placeholder="Ingrese su texto a cifrar" 
             class="texto_original"></textarea>
-            </form>
+        </form>
 
         <div class="container_rango">
-            <input classs="rango" type="range" value="4" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
-            <output>10</output>
+            <input id="rango" classs="rango" type="range" value="4" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
+            <output>4</output>
         </div>
-        <div class="crifrado"></div>
+
+        <div class="container_button">
+            <div class="botton">
+                <i classs="button" id="button" >CIFRAR</i>
+        
+            </div>
+            
+        </div>
+
+        <div class="cifrado">
+            <textarea spellcheck="false"  class="texto_cifrado" readonly></textarea>
+        </div>
     </div>
+    <script src="cifrador.js"></script>
+    
 </body>
 </html>
