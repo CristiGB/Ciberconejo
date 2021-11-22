@@ -7,7 +7,7 @@ resultado = container.querySelector(".texto_cifrado"),
 CifrarBtn = container.querySelector("#button"),
 form = container.querySelector(".cifraForm");
 
-var texto_cifrado = "";
+var texto_cifrado ="";
 let C = 0; 
 
 CifrarBtn.addEventListener('click', ()=>{
@@ -17,15 +17,14 @@ CifrarBtn.addEventListener('click', ()=>{
 
 const shifMessage = () => {
     var texto = texto_original.value.replace( /\s+/g, '');
-    const wordArray = [...texto.toUpperCase()];
-    cifrar(0,wordArray);
+    const wordArrayC = [...texto.toUpperCase()];
+    cifrar(0,wordArrayC);
 }
 
 function cifrar(indexLetra, cadena){
     if(indexLetra == cadena.length) return;
     letraSinCifrar = cadena[indexLetra];
     switch(cifrador.value){
-
         case 'A_Fin':
             M = alfabeto.indexOf(letraSinCifrar);
             C = (2*M + parseInt(rango.value)) % alfabeto.length;

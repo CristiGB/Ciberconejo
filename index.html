@@ -46,7 +46,7 @@
         <h1 class="titulo">Decifradores</h1>
         <form class="decifraForm" autocomplete="off">
             <label for="texto_decrifrador">Escoja el cifrador:</label>
-            <select name="select_cifrador" id="cifradores" form="cifraform">
+            <select name="select_cifrador_dc" id="dccifradores" form="decifraform">
                 <option value="vacio">Seleccione..  </option>
                 <option value="A_Fin">Sustitucion a fin</option>
                 <option value="Des_Puro">Desplazamiento Puro</option>
@@ -55,14 +55,10 @@
             class="texto_original_cifrado"></textarea>
         </form>
 
-        <div class="container_rango2">
-            <input id="rango2" classs="rango2" type="range" value="4" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
-            <output>4</output>
-        </div>
 
         <div class="container_DCbutton">
             <div class="bottonDC">
-                <i classs="buttonDC" id="button" >DECIFRAR</i>
+                <i classs="buttonDC" id="buttonDC" >DECIFRAR</i>
         
             </div>
             
