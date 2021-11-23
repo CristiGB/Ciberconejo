@@ -70,12 +70,12 @@ input[type="range"]{
     width: 100%;
 }
 
-.container_button, .container_DCbutton{
+.contenedor_boton{
     display: grid;
     width: 100%;
     justify-items: center;
 }
-.botton, .bottonDC{
+.bton{
     width: 50%;
     border-radius: 10px;
     background-color: var(--blanco);
@@ -83,7 +83,7 @@ input[type="range"]{
     text-align: center;
     cursor: pointer;
 }
-.botton:hover,.bottonDC:hover{
+.bton:hover{
     color: var(--blanco);
     background-color: var(--azul_rey);
 }
