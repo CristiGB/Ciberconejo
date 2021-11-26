@@ -11,7 +11,7 @@
     --gris: #4d4c55;
     --amarillo_pollito: #E9F680;
     --moradito: #85c2c7;
-
+    --rosa : #af4b75;
 }
 
 *{
@@ -23,20 +23,33 @@
 
 
 Body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: var(--azulito);
 }
+.contendor_imagen{
+    width: 100px;
+    height: 100px;
+    margin: 10px 80px 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--pink_light);
+}
+
+.contendor_imagen img{
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+}
 
 .contenedor{
+    justify-content: center;
+    align-items: center;
     display: flex;
-    width: 800px;
+    width: 100%;
 }
 
 .Main{
-    width: 300px;
+    width: 350px;
     padding: 20px;
     margin: 0 50px;
     color: var(--blanco);
@@ -76,7 +89,8 @@ input[type="range"]{
     justify-items: center;
 }
 .bton{
-    width: 50%;
+    width: 45%;
+    margin: 0 5px;
     border-radius: 10px;
     background-color: var(--blanco);
     color: var(--azul_rey);
@@ -95,5 +109,14 @@ input[type="range"]{
     width: 100%;
     background-color: var(--gris);
     margin: 10px 0 ; 
+    color: var(--blanco);
+}
+
+.next{
+    display: flex;
+    justify-content: center;
+}
+.bottonDC__next{
+    background-color: var(--rosa);
     color: var(--blanco);
 }
