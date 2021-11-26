@@ -1,4 +1,4 @@
-const Estadisticas =["E","S","O","I","N","R","D","T", "C","L","U","M"];
+const Estadisticas =["E","A","S","O","I","N","R","D","T", "C","L","U","M","P","G","B","F","V","Y","Q","H","Z","J","X","W","K","N"];
 const container2 = document.querySelector(".Main_decifrador"),
 texto_original_cifrado = container2.querySelector(".texto_original_cifrado"),
 cifradores = container2.querySelector("#dccifradores"),
@@ -22,6 +22,7 @@ DecifrarBtn.addEventListener('click', ()=>{
     shifMessageDC();
 
 });
+
 NextBtn.addEventListener('click', ()=>{
     texto_decifrado = "";
     IntentarNuevamente();
@@ -52,6 +53,7 @@ function decifrar(indexLetra, cadena){
             alert("Seleccione un cifrador");
             return;
          break;
+
     }
 
     M < 0 ? texto_decifrado = texto_decifrado + alfabetoInvertido[M*-1-1] : texto_decifrado = texto_decifrado + alfabeto[M];
@@ -95,19 +97,19 @@ function sistema(cadena){
     switch(cifradores.value){
 
         case 'A_Fin':
-            do{ 
-                if(i > 2 ) break;    
+            do{    
                     b = alfabeto.indexOf(MisFrecuencias[estado].letra);
                     a = (alfabeto.indexOf(MisFrecuencias[estado+1].letra)-b)*parseInt(inv(alfabeto.indexOf(Estadisticas[0]),N)) % N;
                     console.log(MisFrecuencias[estado].letra)
-                    console.log(estado)
+                    console.log(b)
+                    console.log(a)
                     estado++; 
             }while(mcd(a,N)!=1 || a < 0 || b < 0)
             break;
         case 'Des_Puro':  
                 do{
-                b = alfabeto.indexOf(MisFrecuencias[estado].letra) - alfabeto.indexOf(Estadisticas[0]) ;
-                console.log(MisFrecuencias[estado].letra)
+                b = (alfabeto.indexOf(MisFrecuencias[estado].letra) - alfabeto.indexOf(Estadisticas[0])) % N;
+                console.log(alfabeto.indexOf(MisFrecuencias[estado].letra))
                 console.log(b)
                 estado++;
                 }while( b < 0);
@@ -120,22 +122,30 @@ function sistema(cadena){
      
 
 }
-
+ 
 const IntentarNuevamente=()=>{
     switch(cifradores.value){
 
         case 'A_Fin':
-            if(intentos > Estadisticas.length) alert("No mas intentos"); else{ 
+
+            if(intentos + 1 >= Estadisticas.length) alert("No mas intentos"); else{ 
             do{ 
                 if(estado + 2 > MisFrecuencias.length ) { 
                     estado=0;
-                    intentos > Estadisticas.length? Break : intentos++;
-                } 
-                mcd(alfabeto.indexOf(Estadisticas[intentos]),N) !=1 ? intentos++:      
+                    if( intentos > Estadisticas.length ) Break; else intentos++;
+                }
+                 
+                while(mcd(alfabeto.indexOf(Estadisticas[intentos]),N) !=1 )
+                 intentos++;
+
                 b = alfabeto.indexOf(MisFrecuencias[estado].letra);
+
                 alfabeto.indexOf(Estadisticas[intentos]) == 3 ? intentos ++:
                 a = (alfabeto.indexOf(MisFrecuencias[estado+1].letra)-b)*parseInt(inv(alfabeto.indexOf(Estadisticas[intentos]),N)) % N;
-                console.log(alfabeto.indexOf(Estadisticas[intentos]))
+                console.log(Estadisticas[intentos]);
+                console.log(intentos)
+                console.log(a)
+                console.log(b)
                 estado++; 
                     //console.log(alfabeto.indexOf(MisFrecuencias[estado+1].letra))
             }while(mcd(a,N)!=1 || a < 0 );
@@ -145,8 +155,12 @@ const IntentarNuevamente=()=>{
         case 'Des_Puro':  
         do{
             estado++;
-            b = alfabeto.indexOf(MisFrecuencias[estado].letra) - alfabeto.indexOf(Estadisticas[0]) ; 
-            console.log(estado)   
+            if(estado  > MisFrecuencias.length ) { 
+                estado=0;
+                intentos > Estadisticas.length? Break : intentos++;
+            } 
+            b = alfabeto.indexOf(MisFrecuencias[estado].letra) - alfabeto.indexOf(Estadisticas[intentos]) ; 
+            console.log(b)   
          }while( b < 0);
             break;
         default:
