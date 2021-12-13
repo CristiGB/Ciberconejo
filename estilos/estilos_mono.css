@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+
+:root{
+
+    --azul_rey: #080a2b;
+    --azul_oscuro:#131220;
+    --azulito: #68a3d3;
+    --blanco: #ffffff;
+    --pink_light: #f0bfed;
+    --gris: #4d4c55;
+    --amarillo_pollito: #E9F680;
+    --moradito: #85c2c7;
+    --rosa : #e34e95;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}
+
+
+Body{
+    height: 100vh;
+    background-color: var(--azulito);
+}
+
+nav{
+    display:grid;
+    grid-template-columns: 0px 1fr;
+    align-items: center;
+    background-color: var(--azul_rey);
+    margin-bottom: 50px;
+}
+.Grantitulo{
+    text-align: center; 
+    color: var(--rosa);
+}
+
+.contendor_imagen{
+    width: 100px;
+    height: 100px;
+    margin: 5px 80px 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--rosa);
+    cursor: pointer;
+}
+
+.contendor_imagen img{
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+.contenedor{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.Main{
+    width: 350px;
+    padding: 20px;
+    margin: 0 35px;
+    color: var(--blanco);
+    border-radius: 25px;
+    box-shadow: 6px 9px 8px 3px rgb(0, 0, 0, 50%);
+    border: rgba(0, 0, 0, 0.05) dashed;
+    background-color: var(--moradito);
+}
+.show__container{
+    justify-content: center;
+    display: grid;
+    width: 120px;
+}
+
+.mostrar{
+    display: flex;
+}
+
+.titulo{
+    text-align: center;
+}
+.cifraForm, .decifraForm{
+    margin-top: 10px;
+    width: 100%;
+}
+textarea{
+    font-family: 'Merriweather', serif;
+    width: 100%;
+    margin: 10px 0 ; 
+    padding: 10px; 
+    height: 100px;
+    resize: none;
+    border-color: var(--pink_light);
+}
+.container_rango,.container_rango2{
+    display: flex;
+    justify-content: center;
+}
+input[type="range"]{
+    width: 100%;
+    margin-right: 5px;
+}
+input[type="text"]{
+    width: 20%;
+}
+
+#showa,#showb{
+    width: 50px;
+}
+
+.contenedor_boton{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+.bton{
+    width: 45%;
+    margin: 0 5px;
+    border-radius: 10px;
+    background-color: var(--blanco);
+    color: var(--azul_rey);
+    text-align: center;
+    cursor: pointer;
+}
+.bton:hover{
+    color: var(--blanco);
+    background-color: var(--azul_rey);
+}
+.cifrado,.decifrado{
+    padding: 10px 0;
+}
+
+.texto_cifrado,.texto_decifrado{
+    width: 100%;
+    background-color: var(--gris);
+    margin: 10px 0 ; 
+    color: var(--blanco);
+}
+
+.next{
+    display: flex;
+    justify-content: center;
+}
+.bottonDC__next{
+    background-color: var(--rosa);
+    color: var(--blanco);
+}
+
+/*finales*/
+footer{
+    background-color: var(--rosa);
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.pertenencia{
+    color: var(--blanco);
+    text-align: center;
+
+}

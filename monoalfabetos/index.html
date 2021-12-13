@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos_mono.css">
+    
+    <title>Criptograma</title>
+</head>
+<body>
+    <nav>
+        <div class="contendor_imagen">
+            <a href="../index.html"><img src="../imagenes/sorbo.png" ></a>
+        </div>
+        <h1 class="Grantitulo">MONOALFABETO DESPLAZAMIENTO PURO Y SUSTITUCION A FIN</h1>
+    </nav>
+
+    <div class="contenedor">
+    <div class="Main Main_cifrador">
+        <h1 class="titulo">Cifradores</h1>
+        <form class="cifraForm" autocomplete="off">
+            <label for="text_crifrador">Escoja el cifrador:</label>
+            <select name="select_cifrador" id="cifradores" form="cifraform">
+                <option value="vacio">Seleccione..  </option>
+                <option value="A_Fin">Sustitucion a fin</option>
+                <option value="Des_Puro">Desplazamiento Puro</option>
+            </select>
+            <textarea id="texto_original" spellcheck="false" placeholder="Ingrese su texto a cifrar" 
+            class="texto_original"></textarea>
+        </form>
+        <div class="decimacion">
+            <label for="decimacion">Decimador:</label>
+            <input type="text" spellcheck="false"  class="decimador_cifrador" >
+        </div>
+        <div class="container_rango">
+            <input id="rangoC" classs="rango" type="range" value="4" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
+            <output>4</output>
+        </div>
+
+        <div class="contenedor_boton container_button">
+            <div class="bton botton">
+                <i classs="button" id="button" >CIFRAR</i>
+        
+            </div>
+            
+        </div>
+
+        <div class="cifrado">
+            <textarea spellcheck="false"  class="texto_cifrado" readonly></textarea>
+        </div>
+    </div>
+
+
+    <div class="Main Main_decifrador">
+        <h1 class="titulo">Decifradores</h1>
+        <form class="decifraForm" autocomplete="off">
+            <label for="texto_decrifrador">Escoja el cifrador:</label>
+            <select name="select_cifrador_dc" id="dccifradores" form="decifraform">
+                <option value="vacio">Seleccione..  </option>
+                <option value="A_Fin">Sustitucion a fin</option>
+                <option value="Des_Puro">Desplazamiento Puro</option>
+            </select>
+            <textarea id="texto_original_cifrado" spellcheck="false" placeholder="Ingrese su texto a decifrar" 
+            class="texto_original_cifrado"></textarea>
+        </form>
+
+        <div class="decimacion">
+            <label for="decimacion">Decimador:</label>
+            <input type="text" spellcheck="false"  class="decimador_decifrador">
+        </div>
+        <div class="container_rango">
+            <input id="rangoD" classs="rangoD" type="range" value="0" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
+            <output>0</output>
+        </div>
+        <div class="contenedor_boton container_DCbutton">
+            <div class="bton bottonDC">
+                <i classs="buttonDC" id="buttonDC" >DECIFRAR</i>
+        
+            </div>
+            
+        </div>
+
+        <div class="decifrado">
+            <textarea spellcheck="false"  class="texto_decifrado" readonly></textarea>
+        </div>
+        
+        <div class="contenedor_boton container_DCbutton next">
+            <div class=" bton bottonDC__next">
+                <i classs="buttonDC_next" id="buttonDC_next" >NUEVAMENTE FRECUEN</i>
+        
+            </div>
+            
+            <div class=" bton bottonDC__next">
+                <i classs="buttonDC_next" id="buttonDC_next_esafin" >INTENTOS ESTADIST</i>
+        
+            </div>
+            
+        </div>
+    </div>
+    <div class="Main show__container">
+        <div class="mostrar">
+            <label for="decimacion">A : </label>
+            <input spellcheck="false" type="text" class="show_decimador" id="showa" readonly>
+        </div>
+        <div class="mostrar">
+            <label for="decimacion">b : </label>
+            <input spellcheck="false" type="text" class="show_desplazamiento" id="showb" readonly>
+        </div>
+    </div>
+    
+    </div>
+    <script src="cifrador.js"></script>
+    <script src="decifrador.js"></script>
+    <footer>
+        <p class="pertenencia"> 2021 &copy create by isabel Gomez </p>
+    </footer>
+</body>
+</html>

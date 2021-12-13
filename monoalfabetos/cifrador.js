@@ -2,8 +2,9 @@ const alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","
 const container = document.querySelector(".Main_cifrador"),
 texto_original = container.querySelector(".texto_original"),
 cifrador = container.querySelector("#cifradores"),
-rango = container.querySelector("#rango"),
+rango = container.querySelector("#rangoC"),
 resultado = container.querySelector(".texto_cifrado"),
+decimaC = container.querySelector(".decimador_cifrador"),
 CifrarBtn = container.querySelector("#button"),
 form = container.querySelector(".cifraForm");
 
@@ -27,7 +28,7 @@ function cifrar(indexLetra, cadena){
     switch(cifrador.value){
         case 'A_Fin':
             M = alfabeto.indexOf(letraSinCifrar);
-            C = (2*M + parseInt(rango.value)) % alfabeto.length;
+            C = (decimaC.value*M + parseInt(rango.value)) % alfabeto.length;
             break;
         case 'Des_Puro':
             M = alfabeto.indexOf(letraSinCifrar);

@@ -4,91 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    
-    <title>Criptograma</title>
+    <link rel="stylesheet" href="estilos/estilos_index.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Principal</title>
 </head>
 <body>
-    <nav>
-        <div class="contendor_imagen">
-            <img src="sorbo.png">
+    <header class="barra_navegacion">
+        <i class="icon-reorder"></i>
+        <div class="logo__imagen">
+            <div class="miloguito">
+                <img src="./imagenes/logo_conejo.png" alt="">
+            </div>
+            <h1 class="titulo_navegador">CibeRabbit</h1>
+         </div>
+        <div class="contenedor__buscar">
+            <div class="buscador"><input type="text" placeholder="Que estas buscando?..."></div>
+            <div class="contenedor__botton__buscador">
+                <i class="icon-search botton__buscador_interno"></i> 
+            </div>
+        </div>
+        <ul class="nav__menu">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="">Acerca de</a></li>
+            <li><a href="https://www.instagram.com/yuki08_haruka/">Insta</a></li>
+            <li><a href="https://github.com/CristiGB">Github</a></li>
+        </ul>
+        
+    </header>
+    <nav class="targeta__principal">
+        <div class="container__texto__flotante">
+            <p class="texto_flotante">Asegura tu vida, protege tu computadora   y tu informacion</p>
+        </div>
+        <div class="contenedor__layer">
+            <img src="./imagenes/targeta_inicio.jpg" alt="">
         </div>
     </nav>
-
-    <div class="contenedor">
-    <div class="Main Main_cifrador">
-        <h1 class="titulo">Cifradores</h1>
-        <form class="cifraForm" autocomplete="off">
-            <label for="text_crifrador">Escoja el cifrador:</label>
-            <select name="select_cifrador" id="cifradores" form="cifraform">
-                <option value="vacio">Seleccione..  </option>
-                <option value="A_Fin">Sustitucion a fin</option>
-                <option value="Des_Puro">Desplazamiento Puro</option>
-            </select>
-            <textarea id="texto_original" spellcheck="false" placeholder="Ingrese su texto a cifrar" 
-            class="texto_original"></textarea>
-        </form>
-
-        <div class="container_rango">
-            <input id="rango" classs="rango" type="range" value="4" min="0" max="26" oninput="this.nextElementSibling.value=this.value">
-            <output>4</output>
-        </div>
-
-        <div class="contenedor_boton container_button">
-            <div class="bton botton">
-                <i classs="button" id="button" >CIFRAR</i>
-        
+    <section class="seccion_inicio">
+        <h1 class="titulo__inicio">¡EMPECEMOS CON CIFRADORES!</h1>
+        <div class="container__tragetas">
+            <div class="targeta">
+                <h2>Monoalfabetos</h2>
+                <img src="./imagenes/sorbo.png" alt="">
+                <p>En un cifrado monoalfabético o de sustitución simple, cada letra del texto 
+                    claro se representa por otra letra o signo en el texto cifrado. Lo que 
+                    caracteriza al cifrado monoalfabético es que cada letra se representa siempre 
+                    mediante el mismo signo</p>
+                <a href="./monoalfabetos/index.html">Vamos al cifrador</a>
             </div>
-            
-        </div>
-
-        <div class="cifrado">
-            <textarea spellcheck="false"  class="texto_cifrado" readonly></textarea>
-        </div>
-    </div>
-   
-
-    <div class="Main Main_decifrador">
-        <h1 class="titulo">Decifradores</h1>
-        <form class="decifraForm" autocomplete="off">
-            <label for="texto_decrifrador">Escoja el cifrador:</label>
-            <select name="select_cifrador_dc" id="dccifradores" form="decifraform">
-                <option value="vacio">Seleccione..  </option>
-                <option value="A_Fin">Sustitucion a fin</option>
-                <option value="Des_Puro">Desplazamiento Puro</option>
-            </select>
-            <textarea id="texto_original_cifrado" spellcheck="false" placeholder="Ingrese su texto a decifrar" 
-            class="texto_original_cifrado"></textarea>
-        </form>
-
-
-        <div class="contenedor_boton container_DCbutton">
-            <div class="bton bottonDC">
-                <i classs="buttonDC" id="buttonDC" >DECIFRAR</i>
-        
+            <div class="targeta">
+                <h2>Polialfabetos</h2>
+                <img src="./imagenes/hi.png" alt="">
+                <p>En los cifrados polialfabéticos la sustitución aplicada a cada caracter varía 
+                    en función de la posición que ocupe este dentro del texto claro. En realidad 
+                    corresponde a una aplicación cíclica de n cifrados de sustitución monoalfabeto.</p>
+                <a href="./polialfabeto/index.html">Vamos al cifrador</a>
             </div>
-            
+            <div class="targeta">
+                <h2>Poligramatica</h2>
+                <img src="./imagenes/logo.png" alt="">
+                <p>Los cifradores poligrámicos, a diferencia de los monográmicos que cifran como un único 
+                    carácter, consideran un poligrama con n  2 del texto en claro para
+                    proceder a su cifrado.
+                    En ellos estan playFair y hill.
+                </p>
+                <a href="./monoalfabetica-poligramica/index.html">Vamos al cifrador</a>
+            </div>
         </div>
+    </section>
+    <footer>
+        <p class="pertenencia"> 2021 &copy create by isabel Gomez </p>
+    </footer>
 
-        <div class="decifrado">
-            <textarea spellcheck="false"  class="texto_decifrado" readonly></textarea>
-        </div>
-        
-        <div class="contenedor_boton container_DCbutton next">
-            <div class=" bton bottonDC__next">
-                <i classs="buttonDC_next" id="buttonDC_next" >INTENTA NUEVAMENTE</i>
-        
-            </div>
-            
-            <div class=" bton bottonDC__next">
-                <i classs="buttonDC_next" id="buttonDC_next_esafin" >INTENTOS ES_AFIN</i>
-        
-            </div>
-            
-        </div>
-    </div>
-    </div>
-    <script src="cifrador.js"></script>
-    <script src="decifrador.js"></script>
 </body>
 </html>

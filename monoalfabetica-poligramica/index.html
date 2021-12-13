@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <title>Poligramica</title>
+</head>
+<body>
+    <nav>
+        <div class="contendor_imagen">
+            <a href="../index.html"><img src="../imagenes/logo.png"></a>
+        </div>
+        <h1 class="Grantitulo">POLIGRAMICA</h1>
+    </nav>
+
+    <div class="contenedor">
+    <img class="losgif" src="../imagenes/totoro.gif" alt="Funny image"> 
+    <div class="Main Main_cifrador">
+        <h1 class="titulo">Cifradores</h1>
+        <form class="cifraForm" autocomplete="off">
+            <label for="text_crifrador">Escoja el cifrador:</label>
+            <select name="select_cifrador" id="cifradores" form="cifraform" class="selector">
+                <option value="vacio">Seleccione..  </option>
+                <option value="fair">Play fair</option>
+                <option value="hill">Hill</option> 
+             
+            </select>
+            
+            <div class="ingresar_fair" id="ingresar_fair">
+                <label for="eliminar1">Letras a eliminar:</label>
+                <input type="text" spellcheck="false" id="eliminar1" class="letra_eliminada1 letritas" >
+                <input type="text" spellcheck="false" id="eliminar2" class="letra_eliminada2 letritas" >
+            </div>
+
+            <div class="ingresar_fair" id="ingresar_fair2">
+                <label for="El_relleno">Relleno :</label>
+                <input type="text" spellcheck="false" id="El_relleno" class="letra_relleno letritas" >
+            </div>
+           
+
+            <textarea id="texto_original" spellcheck="false" placeholder="Ingrese su texto a cifrar" 
+            class="texto_original"></textarea>
+        </form>
+        <div class="container_Key">
+            <label for="clave">Key:</label>
+            <input type="text" spellcheck="false" id="key" class="clave_cifradora input" >
+        </div>
+
+        <div class="contenedor_boton container_button">
+            <div class="bton botton">
+                <i classs="button" id="button" >CIFRAR</i>
+        
+            </div>
+            
+        </div>
+
+        <div class="cifrado">
+            <textarea spellcheck="false"  class="texto_cifrado" readonly></textarea>
+        </div>
+
+        <!--<div class="contenedor_boton container_button">
+            <div class="bton botton_intento">
+                <i classs="button__otroIntento" id="button__otroIntento" >Dame otro Intento</i>
+        
+            </div>      
+        </div>-->
+    </div>
+
+
+    <div class="Main Main_decifrador">
+        <h1 class="titulo">Decifradores</h1>
+        <form class="decifraForm" autocomplete="off">
+            <label for="texto_decrifrador">Escoja el cifrador:</label>
+            <select name="select_cifrador_dc" id="dccifradores" form="decifraform" class="selector">
+                <option value="vacio">Seleccione..  </option>
+                <option value="fair">Play fair</option>
+                <option value="hill">Hill</option> 
+            </select>
+            <div class="ingresar_fair" id="ingresar_fairdc">
+                <label for="eliminardc1">Letras a eliminar:</label>
+                <input type="text" spellcheck="false" id="eliminardc1" class="letra_eliminadaDC1 letritas" >
+                <input type="text" spellcheck="false" id="eliminardc2" class="letra_eliminadaDC2 letritas" >
+            </div>
+
+            <div class="ingresar_fair" id="ingresar_fairdc2">
+                <label>Relleno :</label>
+                <input type="text" spellcheck="false" id="El_rellenodc" class="letra_rellenoDC letritas" >
+            </div>
+           
+
+            <textarea id="texto_original_cifrado" spellcheck="false" placeholder="Ingrese su texto a decifrar" 
+            class="texto_original_cifrado"></textarea>
+        </form>
+
+        <div class="container_Key">
+            <label for="clave">Key:</label>
+            <input type="text" spellcheck="false"  class="clave_cifradora input" >
+        </div>
+        <div class="contenedor_boton container_DCbutton">
+            <div class="bton bottonDC">
+                <i classs="buttonDC" id="buttonDC" >DECIFRAR</i>
+        
+            </div>
+            
+        </div>
+
+        <div class="decifrado">
+            <textarea spellcheck="false"  class="texto_decifrado" readonly></textarea>
+        </div>
+        
+        </div>
+        <img class="losgif" src="../imagenes/pokemon.gif" alt="Funny image">
+    </div>
+    <footer>
+        <p class="pertenencia"> 2021 &copy create by isabel Gomez </p>
+    </footer>
+    
+    </div>
+    <script src="cifrador.js"></script>
+    <script src="decifrador.js"></script>
+</body>
+</html>
