@@ -1,1 +1,1 @@
-![Preview](vista.PNG)
+![Preview](vista.png)
